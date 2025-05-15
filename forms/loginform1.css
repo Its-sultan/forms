@@ -1,0 +1,371 @@
+:root {
+    --black: #000;
+    --white: #fff;
+    
+  }
+  
+  * { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--white);
+  
+  }
+
+ .heading{
+padding:0px;
+
+    }
+
+   h2{
+    font-size:30px;
+  margin-bottom: 10px;
+  text-underline-offset: 10px;
+
+   }
+
+  .wrapper {
+    position: relative;
+    width: 750px;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid var(--black);
+    border-radius: 32px;
+    overflow: hidden;
+    /* background-color: var(--white); */
+    box-shadow:0 0 20px black;
+    background:linear-gradient(-653deg, var(--white)54.5%, var(--black) 50%);
+    transition: tramsform 0.7s ease, opacity 0.7s ease, background 0.7s ease;
+  }
+  
+  .form-box {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--white); */
+    transition: transform 0.7s ease, opacity 0.7s ease;
+    /* position: absolute; */
+    top: 0;
+    z-index: 1;
+  }
+  
+  .form-box h2 {
+    margin-bottom: 30px;
+    color: var(--black);
+  
+  }
+  
+  .input-box {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+    padding:12px;
+      
+  }
+  
+  .input-box input {
+    width: 100%;
+    padding: 7.5px;
+    border: none;
+    border-bottom: 2px solid var(--black);
+    background: none;
+    color: var(--black);
+    outline: none;
+  }
+
+  .input-box:hover {
+    color:aqua;
+    
+    }
+  
+   
+   .input-box label {
+    position: absolute;
+    top:-3px;
+    left: 12px;
+    color: var(--black);
+    pointer-events: none;
+    transition: 0.3s ease;
+   
+  } 
+ 
+  /* .input-box input:focus + label,
+  .input-box input:not(:placeholder-shown) + label {
+    top:5px;
+    font-size: 12px;
+    color:var(--black);
+
+  } */
+
+  .info-text {
+    width: 50%;
+    padding: 40px;
+     /* background-color: var(--black); */
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content:initial;
+    align-items: center;
+    transition: transform 0.7s ease, opacity 0.7s ease;
+    z-index: 0; 
+  }
+  
+
+  .wrapper.active .form-box.login {
+    transform: translateX(120%);
+    opacity: 0;
+    filter:blur(10px);
+    transition: 0.7s ease, opacity 0.7s ease;
+    
+  }
+
+  .wrapper.active.form-box.sign-up {
+    transform: translateX(0); /* Slide in the sign-up form */
+    opacity: 1;
+    filter: blur(0);
+    transition: transform 0.7s ease, opacity 0.7s ease;
+  }
+  
+  .wrapper.active .info-text {
+   /* transform: translateX(-100%); Slide welcome text to the left*/
+    transform:translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    pointer-events: auto;
+    transition: transform 0.7s ease, opacity 0.7s ease;
+    z-index: 0;
+  }
+  
+  .wrapper.form-box.sign-up {
+    transform:translateX(120%);
+    opacity: 0;
+    filter: blur(10px);
+  }
+  button {
+    padding: 12px 93px;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    border-radius:25px;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  button:hover {
+    background-color:antiquewhite;
+    color: var(--black);
+  }
+  
+  .login {
+    left:0;
+  }
+  .sign-up {
+    margin-top: 20px;
+    color: var(--black);
+    left: 100%; /*Iniatially hidden on the right*/
+  }
+  
+  .sign-up a {
+    color: rgb(41, 185, 185);
+    text-decoration: none;
+    
+  }
+
+  .wrapper.active .login{
+    transform: translateX(-100%);/* hide login form when transitioning*/
+    opacity: 0;
+    filter: blur(10px);
+  }
+
+  .wrapper.active .sign-up{
+    transform: translateX(0);/*Show sign-up form*/
+    opacity: 1;
+    filter: blur(0);
+  }
+
+label {
+  color:#000;
+  /* font-weight:500; */
+  font-weight:bold;
+}
+   
+
+
+
+    /* :root {
+      --black: #000;
+      --white: #fff;
+      
+  }
+  
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: var(--white);
+  }
+  
+  .wrapper {
+      position: relative;
+      width: 750px;
+      height: 450px;
+      display: flex;
+      justify-content: space-between;
+      border: 2px solid var(--black);
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 0 20px black;
+      background: linear-gradient(-653deg, var(--white) 54.5%, var(--black) 50%);
+      transition: transform 0.7s ease, opacity 0.7s ease;
+  }
+  
+  .form-box {
+      width: 50%;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.7s ease, opacity 0.7s ease;
+  }
+  
+  .form-box h2 {
+      margin-bottom: 30px;
+      color: var(--black);
+  }
+  
+  .input-box {
+      position: relative;
+      margin-bottom: 30px;
+      width: 100%;
+      padding: 12px;
+  }
+  
+  .input-box input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid var(--black);
+      background: none;
+      color: var(--black);
+      outline: none;
+  }
+  
+  .input-box label {
+      position: absolute;
+      top: -3px;
+      left: 12px;
+      color: var(--black);
+      pointer-events: none;
+      transition: 0.3s ease;
+  }
+  
+  /* Info text styling for welcome message *
+  .info-text {
+      width: 50%;
+      padding: 40px;
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--black); /* Keep black background for welcome message *
+      transition: transform 0.7s ease, opacity 0.7s ease;
+      z-index: 0; /* Ensure welcome message stays behind the forms *
+  }
+  
+  /* Adjustments to ensure smooth transitions *
+  .wrapper.active .form-box.login {
+      transform: translateX(120%);
+      opacity: 0;
+      filter: blur(10px);
+      transition: transform 0.7s ease, opacity 0.7s ease;
+  }
+  
+  .wrapper.active .form-box.sign-up {
+      transform: translateX(0);
+      opacity: 1;
+      filter: blur(0);
+      transition: transform 0.7s ease, opacity 0.7s ease;
+  }
+  
+  .wrapper.active .info-text {
+      transform: translateX(0); /* Keep welcome message in place *
+      opacity: 1;
+      filter: blur(0);
+      pointer-events: auto;
+      transition: transform 0.7s ease, opacity 0.7s ease;
+  }
+  
+  button {
+      padding: 12px 93px;
+      background-color: var(--black);
+      color: var(--white);
+      border: none;
+      cursor: pointer;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+      background-color: antiquewhite;
+      color: var(--black);
+  }
+  
+  /* Additional styling for the sign-up and login forms *
+  .login {
+      left: 0;
+  }
+  
+  .sign-up {
+      margin-top: 20px;
+      color: var(--black);
+      left: 100%;
+  }
+  
+  .sign-up a {
+      color: rgb(41, 185, 185);
+      text-decoration: none;
+  }
+  
+  /* Adjustments for form transition *
+  .wrapper.active .login {
+      transform: translateX(-100%);
+      opacity: 0;
+      filter: blur(10px);
+  }
+  
+  .wrapper.active .sign-up {
+      transform: translateX(0);
+      opacity: 1;
+      filter: blur(0);
+  }
+  
+  /* Ensure the welcome message stays visible *
+  .wrapper.active .info-text {
+      transform: translateX(0);
+      opacity: 1;
+      filter: blur(0);
+  }
+   */

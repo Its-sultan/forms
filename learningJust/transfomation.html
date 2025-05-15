@@ -1,0 +1,25 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+    <!-- Grid -->
+    <g stroke="#eee" stroke-width="0.5">
+        <line x1="0" y1="150" x2="400" y2="150"/>
+        <line x1="200" y1="0" x2="200" y2="300"/>
+    </g>
+    
+    <!-- Original Square -->
+    <rect x="180" y="130" width="40" height="40" fill="none" stroke="blue" stroke-width="2"/>
+    <text x="170" y="125" fill="blue">Original</text>
+    
+    <!-- Translated Square -->
+    <rect x="240" y="90" width="40" height="40" fill="none" stroke="red" stroke-width="2"/>
+    <text x="230" y="85" fill="red">Translated</text>
+    
+    <!-- Rotated Square -->
+    <g transform="rotate(45 200 150)">
+        <rect x="180" y="130" width="40" height="40" fill="none" stroke="green" stroke-width="2"/>
+    </g>
+    <text x="160" y="200" fill="green">Rotated</text>
+    
+    <!-- Scaled Square -->
+    <rect x="160" y="110" width="80" height="80" fill="none" stroke="purple" stroke-width="2"/>
+    <text x="150" y="100" fill="purple">Scaled</text>
+</svg>
